@@ -52,6 +52,11 @@ run.bat
 
 Open **`http://localhost:5000`** in your browser to launch the dashboard!
 
+### 📁 Sample Drawings Included to Test
+You can test the import pipeline immediately using the sample blueprint drawings included in the [`sample_drawings/`](sample_drawings/) folder:
+- **[`sample_drawings/plan_part_1.pdf`](sample_drawings/plan_part_1.pdf)** — Structural PDF Plan Sheet (Columns, Footings, Beams, Walls)
+- **[`sample_drawings/Structural_Drawings_Residential_House.dxf`](sample_drawings/Structural_Drawings_Residential_House.dxf)** — Structural CAD DXF Drawing
+
 ---
 
 ## 📄 License & Attribution
