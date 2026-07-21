@@ -55,4 +55,4 @@ Open **`http://localhost:5000`** in your browser to launch the dashboard!
 ---
 
 ## 📄 License & Attribution
-Developed by **Louis Yong** for Build Week 2026. Methodology based on Max B. Fajardo Jr.'s *Simplified Construction Estimate*.
+Developed by **Louis L. Uy** for Build Week 2026. Methodology based on Max B. Fajardo Jr.'s *Simplified Construction Estimate*.
