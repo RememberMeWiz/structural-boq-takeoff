@@ -1,4 +1,4 @@
-# Structural Bill of Quantities (BOQ) Takeoff System
+# Plan2Takeoff — Automated Structural Takeoff Engine
 
 > **Build Week Hackathon Submission** — AI-Powered Structural Quantity Takeoff & Direct Cost Estimation Engine based on the Fajardo Civil Engineering Methodology.
 
