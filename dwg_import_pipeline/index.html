@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DWG Import</title>
+<style>
+  :root {
+    --blueprint: #0f2f4f;
+    --blueprint-line: #3a6b94;
+    --paper: #eef2f0;
+    --ink: #14262f;
+    --amber: #d98b1f;
+    --ok: #3f8f6f;
+    --err: #c1462f;
+    --mono: "IBM Plex Mono", "SF Mono", Consolas, monospace;
+    --sans: "IBM Plex Sans", "Segoe UI", Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--blueprint);
+    background-image:
+      linear-gradient(var(--blueprint-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--blueprint-line) 1px, transparent 1px);
+    background-size: 28px 28px;
+    background-position: -1px -1px;
+    font-family: var(--sans);
+    color: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .sheet {
+    width: min(560px, 100%);
+    background: rgba(14, 32, 48, 0.92);
+    border: 1px solid var(--blueprint-line);
+    padding: 32px;
+    position: relative;
+  }
+
+  .sheet::before, .sheet::after,
+  .sheet .corner-br, .sheet .corner-tr {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--amber);
+  }
+  .sheet::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+  .sheet::after  { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+  .corner-tr { top: -1px; right: -1px; border-left: none; border-bottom: none; }
+  .corner-br { bottom: -1px; left: -1px; border-right: none; border-top: none; }
+
+  h1 {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--blueprint-line);
+    margin: 0 0 4px;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 22px;
+    margin: 0 0 24px;
+    color: var(--paper);
+  }
+
+  .dropzone {
+    border: 2px dashed var(--blueprint-line);
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .dropzone.dragover {
+    border-color: var(--amber);
+    background: rgba(217, 139, 31, 0.08);
+  }
+  .dropzone p {
+    margin: 0 0 6px;
+    font-size: 15px;
+  }
+  .dropzone .hint {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--blueprint-line);
+  }
+  input[type="file"] { display: none; }
+
+  .job {
+    margin-top: 24px;
+    border-top: 1px solid var(--blueprint-line);
+    padding-top: 20px;
+    display: none;
+  }
+  .job.visible { display: block; }
+
+  .job-file {
+    font-family: var(--mono);
+    font-size: 13px;
+    margin-bottom: 10px;
+    word-break: break-all;
+  }
+
+  .track {
+    height: 6px;
+    background: rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+  }
+  .fill {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 0%;
+    background: var(--amber);
+    transition: width 0.4s ease;
+  }
+  .fill.error { background: var(--err); }
+  .fill.done { background: var(--ok); }
+
+  .status-line {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    margin-top: 10px;
+    color: var(--paper);
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+  }
+  .status-line .pct { color: var(--amber); min-width: 38px; }
+  .status-line.error .pct { color: var(--err); }
+  .status-line.done .pct { color: var(--ok); }
+
+  .summary {
+    margin-top: 14px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--blueprint-line);
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+  <div class="sheet">
+    <div class="corner-tr"></div>
+    <div class="corner-br"></div>
+    <h1>Task 5 // Import Pipeline</h1>
+    <h2>Drop a drawing to convert it</h2>
+
+    <div class="dropzone" id="dropzone">
+      <p>Drag a .dwg, .dxf, or .pdf file here, or click to browse</p>
+      <div class="hint">DWG is converted locally via ODA File Converter</div>
+      <input type="file" id="fileInput" accept=".dwg,.dxf,.pdf">
+    </div>
+
+    <div class="job" id="job">
+      <div class="job-file" id="jobFile"></div>
+      <div class="track"><div class="fill" id="fill"></div></div>
+      <div class="status-line" id="statusLine">
+        <span class="pct" id="pct">0%</span>
+        <span id="message">Queued…</span>
+      </div>
+      <div class="summary" id="summary"></div>
+    </div>
+  </div>
+
+<script>
+const dropzone = document.getElementById('dropzone');
+const fileInput = document.getElementById('fileInput');
+const jobEl = document.getElementById('job');
+const jobFileEl = document.getElementById('jobFile');
+const fillEl = document.getElementById('fill');
+const statusLineEl = document.getElementById('statusLine');
+const pctEl = document.getElementById('pct');
+const messageEl = document.getElementById('message');
+const summaryEl = document.getElementById('summary');
+
+let pollTimer = null;
+
+dropzone.addEventListener('click', () => fileInput.click());
+dropzone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropzone.classList.add('dragover');
+});
+dropzone.addEventListener('dragleave', () => dropzone.classList.remove('dragover'));
+dropzone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropzone.classList.remove('dragover');
+  if (e.dataTransfer.files.length) uploadFile(e.dataTransfer.files[0]);
+});
+fileInput.addEventListener('change', () => {
+  if (fileInput.files.length) uploadFile(fileInput.files[0]);
+});
+
+function resetJobUI(filename) {
+  jobEl.classList.add('visible');
+  jobFileEl.textContent = filename;
+  fillEl.className = 'fill';
+  fillEl.style.width = '0%';
+  statusLineEl.className = 'status-line';
+  pctEl.textContent = '0%';
+  messageEl.textContent = 'Uploading…';
+  summaryEl.textContent = '';
+}
+
+async function uploadFile(file) {
+  const ext = file.name.slice(file.name.lastIndexOf('.')).toLowerCase();
+  if (ext !== '.dwg' && ext !== '.dxf' && ext !== '.pdf') {
+    resetJobUI(file.name);
+    setError('Unsupported file type. Please choose a .dwg, .dxf, or .pdf file.');
+    return;
+  }
+
+  resetJobUI(file.name);
+  if (pollTimer) clearInterval(pollTimer);
+
+  const formData = new FormData();
+  formData.append('file', file);
+
+  let res;
+  try {
+    res = await fetch('/api/upload', { method: 'POST', body: formData });
+  } catch (err) {
+    setError('Could not reach the local server. Is it running?');
+    return;
+  }
+
+  if (res.status !== 202) {
+    const body = await res.json().catch(() => ({}));
+    setError(body.error || `Upload failed (HTTP ${res.status}).`);
+    return;
+  }
+
+  const { job_id } = await res.json();
+  pollTimer = setInterval(() => pollStatus(job_id), 900);
+}
+
+async function pollStatus(jobId) {
+  let res;
+  try {
+    res = await fetch(`/api/status/${jobId}`);
+  } catch (err) {
+    setError('Lost connection to the local server.');
+    clearInterval(pollTimer);
+    return;
+  }
+
+  if (!res.ok) {
+    setError('Job status could not be retrieved.');
+    clearInterval(pollTimer);
+    return;
+  }
+
+  const job = await res.json();
+  fillEl.style.width = `${job.progress ?? 0}%`;
+  pctEl.textContent = `${job.progress ?? 0}%`;
+  messageEl.textContent = job.message || '';
+
+  if (job.stage === 'error') {
+    setError(job.message);
+    clearInterval(pollTimer);
+  } else if (job.stage === 'done') {
+    fillEl.classList.add('done');
+    statusLineEl.classList.add('done');
+    clearInterval(pollTimer);
+    if (job.result && job.result.summary) {
+      const s = job.result.summary;
+      if (s.page_count !== undefined) {
+        // PDF summary shape
+        summaryEl.textContent =
+          `entities: ${s.total_entities}  |  pages: ${s.page_count}  |  sheets: ${s.layers.length}`;
+      } else {
+        // DXF/DWG summary shape
+        summaryEl.textContent =
+          `entities: ${s.total_entities}  |  layers: ${s.layer_count}  |  units: ${s.units}`;
+      }
+    }
+  }
+}
+
+function setError(message) {
+  fillEl.classList.add('error');
+  fillEl.style.width = '100%';
+  statusLineEl.classList.add('error');
+  pctEl.textContent = 'ERR';
+  messageEl.textContent = message;
+}
+</script>
+</body>
+</html>

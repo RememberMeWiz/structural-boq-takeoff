@@ -1,0 +1,83 @@
+boq-dashboard/.env
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/.env
+
+boq-dashboard/.env.example
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/.env.example
+
+boq-dashboard/.gitignore
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/.gitignore
+
+boq-dashboard/README.md
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/README.md
+
+boq-dashboard/dist/assets/index-BCGWK-2A.css
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/dist/assets/index-BCGWK-2A.css
+
+boq-dashboard/dist/assets/index-BVi43PwW.js
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/dist/assets/index-BVi43PwW.js
+
+boq-dashboard/dist/index.html
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/dist/index.html
+
+boq-dashboard/index.html
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/index.html
+
+boq-dashboard/package-lock.json
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/package-lock.json
+
+boq-dashboard/package.json
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/package.json
+
+boq-dashboard/postcss.config.js
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/postcss.config.js
+
+boq-dashboard/src/App.jsx
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/src/App.jsx
+
+boq-dashboard/src/components/BoqTable.jsx
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/src/components/BoqTable.jsx
+
+boq-dashboard/src/components/DrawingViewer.jsx
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/src/components/DrawingViewer.jsx
+
+boq-dashboard/src/components/ElementInspector.jsx
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/src/components/ElementInspector.jsx
+
+boq-dashboard/src/components/ImportModal.jsx
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/src/components/ImportModal.jsx
+
+boq-dashboard/src/data/mockProjectData.js
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/src/data/mockProjectData.js
+
+boq-dashboard/src/hooks/useExport.js
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/src/hooks/useExport.js
+
+boq-dashboard/src/hooks/useProjectData.js
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/src/hooks/useProjectData.js
+
+boq-dashboard/src/index.css
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/src/index.css
+
+boq-dashboard/src/lib/supabaseClient.js
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/src/lib/supabaseClient.js
+
+boq-dashboard/src/main.jsx
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/src/main.jsx
+
+boq-dashboard/src/utils/dualCheck.js
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/src/utils/dualCheck.js
+
+boq-dashboard/src/utils/geometry.js
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/src/utils/geometry.js
+
+boq-dashboard/src/utils/visualStyle.js
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/src/utils/visualStyle.js
+
+boq-dashboard/supabase/rls_policies.sql
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/supabase/rls_policies.sql
+
+boq-dashboard/tailwind.config.js
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/tailwind.config.js
+
+boq-dashboard/vite.config.js
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq-dashboard/vite.config.js

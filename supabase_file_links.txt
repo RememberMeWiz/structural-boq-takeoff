@@ -1,0 +1,90 @@
+00_INSTRUCTIONS_FOR_AI.md
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/00_INSTRUCTIONS_FOR_AI.md
+boq_dashboard_mockup.jpg
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq_dashboard_mockup.jpg
+boq_project_roadmap.md
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq_project_roadmap.md
+boq_schema.sql
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/boq_schema.sql
+dwg_import_pipeline/README.md
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/dwg_import_pipeline/README.md
+dwg_import_pipeline/app.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/dwg_import_pipeline/app.py
+dwg_import_pipeline/index.html
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/dwg_import_pipeline/index.html
+dwg_import_pipeline/oda_converter.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/dwg_import_pipeline/oda_converter.py
+dwg_import_pipeline/pdf_processor.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/dwg_import_pipeline/pdf_processor.py
+dwg_import_pipeline/pipeline.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/dwg_import_pipeline/pipeline.py
+log.md
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/log.md
+parser_pipeline/README.md
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/parser_pipeline/README.md
+parser_pipeline/association.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/parser_pipeline/association.py
+parser_pipeline/boq_excel_generator.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/parser_pipeline/boq_excel_generator.py
+parser_pipeline/dom_mapper.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/parser_pipeline/dom_mapper.py
+parser_pipeline/dxf_geometry_engine.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/parser_pipeline/dxf_geometry_engine.py
+parser_pipeline/dxf_parser.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/parser_pipeline/dxf_parser.py
+parser_pipeline/extractor.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/parser_pipeline/extractor.py
+parser_pipeline/fajardo_takeoff_engine.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/parser_pipeline/fajardo_takeoff_engine.py
+parser_pipeline/llm_layer_classifier.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/parser_pipeline/llm_layer_classifier.py
+parser_pipeline/member_schedule_exporter.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/parser_pipeline/member_schedule_exporter.py
+parser_pipeline/member_size_extractor.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/parser_pipeline/member_size_extractor.py
+parser_pipeline/pdf_report_generator.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/parser_pipeline/pdf_report_generator.py
+parser_pipeline/registry_generator.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/parser_pipeline/registry_generator.py
+parser_pipeline/run_full_qa_audit.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/parser_pipeline/run_full_qa_audit.py
+parser_pipeline/takeoff_report_generator.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/parser_pipeline/takeoff_report_generator.py
+parser_pipeline/test_dom_mapper.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/parser_pipeline/test_dom_mapper.py
+parser_pipeline/test_extractor.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/parser_pipeline/test_extractor.py
+parser_pipeline/test_fajardo_takeoff_engine.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/parser_pipeline/test_fajardo_takeoff_engine.py
+parser_pipeline/test_member_size_extractor.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/parser_pipeline/test_member_size_extractor.py
+progress_roadmap.md
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/progress_roadmap.md
+project_description.md
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/project_description.md
+project_objectives/BOQ_2.5_2.6_consolidated_with_research_log.md
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/project_objectives/BOQ_2.5_2.6_consolidated_with_research_log.md
+project_objectives/boq_project_roadmap.md
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/project_objectives/boq_project_roadmap.md
+project_objectives/progress_report.md
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/project_objectives/progress_report.md
+project_objectives/progress_roadmap.md
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/project_objectives/progress_roadmap.md
+project_objectives/project_description.md
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/project_objectives/project_description.md
+project_objectives/tech_spec.md
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/project_objectives/tech_spec.md
+sync.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/sync.py
+task.md
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/task.md
+task1/log.md
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/task1/log.md
+task1/task1_qa_verification_consolidated.zip
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/task1/task1_qa_verification_consolidated.zip
+task6/run.bat
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/task6/run.bat
+tech_spec.md
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/tech_spec.md
+upload.py
+  Public URL: https://ickbqcdbyheyqyqfjpzv.supabase.co/storage/v1/object/public/project-files/upload.py
